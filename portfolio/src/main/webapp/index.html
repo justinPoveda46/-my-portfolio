@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="returnMessage.js"></script>
     <script src="script.js"></script>
     <link rel="icon" href="https://970-257dbe62-ec94-4251-b600-e65ea683de3c.cs-us-east1-wzxb.cloudshell.dev/mini-browser/home/jpoveda/software-product-sprint/portfolio/src/main/webapp/Images/Screen%20Shot%202021-03-03%20at%208.36.29%20PM.png">
   </head>
   <body>
+    <button onclick="returnFacts()">
+           Random Fact About Me
+    </button>
+      <p id="message-container"></p>
+    <p>Click <a href="/MyServlet">here</a> to see the server response directly.</p>
+
         <header class="header" role="banner" id="top">
     <div class="row">
       <nav class="nav" role="navigation">
@@ -75,7 +82,7 @@
             <div class="work__text">
               <h3>ChewyMaps</h3>
               <p>
-                A wep application for the first ever Chewy hosted Hackathon(ChewyHacks).
+                A web application for the first ever Chewy hosted Hackathon(ChewyHacks).
                 ChewyMaps serves as an extension to the Chewy website, allowing users to locate
                 pet friendly restaurants, parks, hotels and more.
               </p>
@@ -205,7 +212,7 @@
             
           <p> Phone Number: 347-645-6202   -  Email: justin.poveda@stonybrook.edu  -  Queens, NY</p>
         </p>
-        <a href="mailto:justin.poveda@stonybrook.edu" class="btn">Send Me An Email</a>
+
       </div>
     </div>
   </section>
