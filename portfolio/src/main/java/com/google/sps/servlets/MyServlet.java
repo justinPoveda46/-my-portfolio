@@ -14,25 +14,25 @@ public class MyServlet extends HttpServlet {
      */
     private static final long serialVersionUID = -6558145762346063268L;
 
-    @Override
+  @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    String json = convertToJson(myFacts);
-    response.setContentType("text/html;");
-    response.getWriter().println(json);
+        String json = convertToJson(myFacts);
+        response.setContentType("text/html;");
+        response.getWriter().println(json);
   }
   
   private String convertToJson(String[] myFacts) {
-    String json = "{";
-    json += "\"Fact 1\": ";
-    json += "\"" + myFacts[0] + "\"";
-    json += ", ";
-    json += "\"Fact 2\": ";
-    json += "\"" + myFacts[1] + "\"";
-    json += ", ";
-    json += "\"Fact 3\": ";
-    json += "\"" + myFacts[2] + "\"";
-    json += "}";
-    return json;
-  }
+        String json = "{";
+        json += "\"Fact 1\": ";
+        json += "\"" + myFacts[0] + "\"";
+        json += ", ";
+        json += "\"Fact 2\": ";
+        json += "\"" + myFacts[1] + "\"";
+        json += ", ";
+        json += "\"Fact 3\": ";
+         json += "\"" + myFacts[2] + "\"";
+         json += "}";
+        return json;
+    }
 }
   
