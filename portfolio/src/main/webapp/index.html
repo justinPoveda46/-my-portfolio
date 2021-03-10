@@ -4,16 +4,253 @@
     <meta charset="UTF-8">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="returnMessage.js"></script>
     <script src="script.js"></script>
+    <link rel="icon" href="https://970-257dbe62-ec94-4251-b600-e65ea683de3c.cs-us-east1-wzxb.cloudshell.dev/mini-browser/home/jpoveda/software-product-sprint/portfolio/src/main/webapp/Images/Screen%20Shot%202021-03-03%20at%208.36.29%20PM.png">
   </head>
   <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+    <button onclick="returnFacts()">
+           Random Fact About Me
+    </button>
+      <p id="message-container"></p>
+    <p>Click <a href="/MyServlet">here</a> to see the server response directly.</p>
+
+        <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="#orgs" class="nav__link">Involvement/Leadership</a></li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
     </div>
+    <div class="header__text-box row">
+
+      <div class="header__text">
+        <h1 class="heading-primary">
+          <span>Justin Poveda</span>
+        </h1>
+        <p>A College Sophomore at Stony Brook University Studying Technological Systems Management and Specializing in Computer Science</p>
+        <a href="#contact" class="btn btn--pink">Get in touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+
+    <!-- ***** Work ***** -->
+    <section class="work" id="work">
+      <div class="row">
+        <h2>Projects</h2>
+        <div class="work__boxes">
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Invigorate</h3>
+              <p>
+                A web application designed for the disabled community to 
+                locate accessible locations all over New York City Subways
+              </p>
+              <ul class="work__list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Google Firbase</li>
+                <li>Google Maps API</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://jtscreen.github.io/invigorate/signIn.html" target="_blank" class="link__text">
+                  Visit Site <span>&rarr;</span>
+                </a>
+                <a href="https://jtscreen.github.io/invigorate/signIn.html" title="Main Page" target="_blank">
+                  <img src="https://github.githubassets.com/images/modules/open_graph/github-mark.png" class="work__code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="/Images/Project_1.png" class="work__image" alt="Project 1" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>ChewyMaps</h3>
+              <p>
+                A web application for the first ever Chewy hosted Hackathon(ChewyHacks).
+                ChewyMaps serves as an extension to the Chewy website, allowing users to locate
+                pet friendly restaurants, parks, hotels and more.
+              </p>
+              <ul class="work__list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Glitch</li>
+                <li>Google Firbase</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://chewymaps.glitch.me/" class="link__text">
+                  Visit Site <span>&rarr;</span>
+                </a>
+                <a href="https://glitch.com/~chewymaps">
+                  <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--1SYEQFIL--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/609/21477ab0-e36f-4e4a-a02a-7074a782d4f2.png" class="work__code" title="View Source Code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="/Images/Project_2.png" class="work__image" alt="Project 1" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Portfolio</h3>
+              <p>
+                The Portfolio you are currently on :)
+                Showcases my projects, leadership, resume 
+                and everything one needs to know about me.  
+              </p>
+              <ul class="work__list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Cloud Shell Editor</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="#" class="link__text">
+                  Visit Site <span>&rarr;</span>
+                </a>
+                <a href="https://github.com/justinPoveda46/-my-portfolio">
+                  <img src="https://github.githubassets.com/images/modules/open_graph/github-mark.png" class="work__code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="/Images/Project_3.png" class="work__image" alt="Project 3" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** Involvement/Leadership ***** -->
+
+    <section class="org" id="orgs">
+      <div class="row">
+        <h2>Involvement/Leadership</h2>
+        <div class="orgs__logos">
+          <a href="https://www.colorstack.org/">
+          <img src="https://pbs.twimg.com/media/ErKa3F5W8AI_qVv.jpg" class="org__logo" alt="Company 2" />
+          </a>
+          <a href="https://codenation.org/">
+          <img src="https://mms.businesswire.com/media/20181031005146/en/687557/23/CN_Logo_Black-01.jpg" class="org__logo" alt="Company 3" />
+          </a>
+          <a href="https://buildyourfuture.withgoogle.com/programs/softwareproductsprint/">
+          <img src="https://observer.com/wp-content/uploads/sites/2/2020/04/stay-and-play-at-home-with-popular-past-google-doodles-coding-2017-6753651837108765-2xa.gif?w=635" class="org__logo" alt="Company 1" />
+          </a>
+          <a href="https://mlt.org/">
+          <img src="https://m1.fluidreview.com/media/assets/reviewrooms/New-ML4T/logo/Clear_MLT_Logo-_PNG.png" class="org__logo" alt="Company 1" />
+          </a>
+          <a href="https://www.allstarcode.org/">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhDoawl4lkop5F8WY9j-hBvV8KgTSBLmD_FA&usqp=CAU" class="org__logo" alt="Company 3" />
+          </a>
+          <a href="https://www.cs.stonybrook.edu/About-Us/Student-Resources">
+          <img src="https://media0.giphy.com/media/xnudw3yfNlvml1ztcB/giphy.gif" class="org__logo" alt="Company 1" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** About ***** -->
+
+    <section class="about" id="about">
+      <div class="row">
+        <h2>About Me</h2>
+        <div class="about__content">
+          <div class="about__text">
+            <p>
+              I am a first generation college student from an Ecuadorian family.
+              I was born and raised in Queens, New York. As a full time student, I 
+              get to pursue two of my biggest passions. My passion for technology and
+              my passion for helping students from underrepresented backgrounds in achieving
+              their dreams of pursuing a career in STEM. In my free time, I enjoy listening
+              to music, binge watching shows, and performing card magic for friends and family.
+            </p>
+            
+            <a href="https://padlet.com/justinpoveda/iyinihj3xsoqi8oi" class="btn">My Resume</a>
+          </div>
+
+          <div class="about__photo-container">
+            <img class="about__photo" src="/Images/HeadShot.jpeg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ***** Contact ***** -->
+
+  <section class="contact" id="contact">
+    <div class="row">
+      <h2>Get in Touch</h2>
+      <div class="contact__info">
+        <p>
+          Thank you for checking out my portfolio! I hope you enjoyed seeing 
+          me work and got to learn a bit about who I am. Whether you are a friend/
+          family member, a recruiter or anyone, I am more than happy to connect
+          and chat about anything. Literally anything, whether it's about music, tech,
+          advise, opportunities, card magic, TV shows, and the list goes on. Or you just 
+          want to say "Hi 👋" in any case feel free to let me know. I will do my best to
+          respond back 😊. The quickest way to reach out to me is via an email.
+            
+          <p> Phone Number: 347-645-6202   -  Email: justin.poveda@stonybrook.edu  -  Queens, NY</p>
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ***** Footer ***** -->
+
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://twitter.com/Justin_I_P" title="Link to Twitter Profile">
+            <img src="https://pbs.twimg.com/profile_images/1308010958862905345/-SGZioPb_400x400.jpg" class="footer__social-image" alt="Twitter">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://github.com/justinPoveda46" title="Link to Github Profile">
+            <img src="https://github.githubassets.com/images/modules/open_graph/github-mark.png" class="footer__social-image" alt="Github">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://www.instagram.com/justin_i_p/" title="Link to Instagram Profile">
+            <img src="https://play-lh.googleusercontent.com/h9jWMwqb-h9hjP4THqrJ50eIwPekjv7QPmTpA85gFQ10PjV02CoGAcYLLptqd19Sa1iJ" class="footer__social-image" alt="Codepen">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://www.linkedin.com/in/justinpoveda/">
+            <img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-circle-512.png" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+          </a>
+        </li>
+      </ul>
+      
+    </div>
+  </footer>
+
+  <a href="#top" class="back-to-top" title="Back to Top">
+    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  </a>
+  <script src="./index.js"></script>
+        
   </body>
 </html>

@@ -15,7 +15,6 @@
 package com.google.sps.servlets;
 
 import com.google.sps.data.ServerStats;
-import com.google.gson.Gson;
 import java.io.IOException;
 import java.util.Date;
 import javax.servlet.annotation.WebServlet;
@@ -26,28 +25,33 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/server-stats")
 public final class ServerStatsServlet extends HttpServlet {
 
-  private final Date startTime = new Date();
+    /**
+     *
+     */
+    private static final long serialVersionUID = -584335164289126456L;
+    private final Date startTime = new Date();
 
   @Override
-  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    // Calculate server stats
-    Date currentTime = new Date();
-    long maxMemory = Runtime.getRuntime().maxMemory();
-    long usedMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+  public void doGet(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
+        // Calculate server stats
+        final Date currentTime = new Date();
+        final long maxMemory = Runtime.getRuntime().maxMemory();
+        final long usedMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
 
-    // Convert the server stats to JSON
-    ServerStats serverStats = new ServerStats(startTime, currentTime, maxMemory, usedMemory);
-    String json = convertToJson(serverStats);
+        // Convert the server stats to JSON
+        final ServerStats serverStats = new ServerStats(startTime, currentTime, maxMemory, usedMemory);
+        final String json = convertToJson(serverStats);
 
-    // Send the JSON as the response
-    response.setContentType("application/json;");
-    response.getWriter().println(json);
-  }
+        // Send the JSON as the response
+        response.setContentType("application/json;");
+        response.getWriter().println(json);
+    }
 
-  /**
-   * Converts a ServerStats instance into a JSON string using manual String concatentation.
-   */
-  private String convertToJson(ServerStats serverStats) {
+    /**
+     * Converts a ServerStats instance into a JSON string using manual String
+     * concatentation.
+     */
+    private String convertToJson(final ServerStats serverStats) {
     String json = "{";
     json += "\"startTime\": ";
     json += "\"" + serverStats.getStartTime() + "\"";
@@ -62,15 +66,5 @@ public final class ServerStatsServlet extends HttpServlet {
     json += serverStats.getUsedMemory();
     json += "}";
     return json;
-  }
-
-  /**
-   * Converts a ServerStats instance into a JSON string using the Gson library. Note: We first added
-   * the Gson library dependency to pom.xml.
-   */
-  private String convertToJsonUsingGson(ServerStats serverStats) {
-    Gson gson = new Gson();
-    String json = gson.toJson(serverStats);
-    return json;
-  }
+    }
 }

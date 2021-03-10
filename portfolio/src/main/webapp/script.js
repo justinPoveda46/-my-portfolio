@@ -1,5 +1,6 @@
 // Copyright 2020 Google LLC
-//
+// ctrl + c  + mvn package exec:java 
+
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,8 +15,7 @@
 
 /**
  * Adds a random greeting to the page.
- */
-function addRandomGreeting() {
+ * function addRandomGreeting() {
   const greetings =
       ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
 
@@ -26,3 +26,5 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+ */
+
