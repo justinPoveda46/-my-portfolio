@@ -9,6 +9,11 @@
     <link rel="icon" href="https://970-257dbe62-ec94-4251-b600-e65ea683de3c.cs-us-east1-wzxb.cloudshell.dev/mini-browser/home/jpoveda/software-product-sprint/portfolio/src/main/webapp/Images/Screen%20Shot%202021-03-03%20at%208.36.29%20PM.png">
   </head>
   <body>
+    <button onclick="returnFacts()">
+           Random Fact About Me
+    </button>
+      <p id="message-container"></p>
+    <p>Click <a href="/MyServlet">here</a> to see the server response directly.</p>
 
         <header class="header" role="banner" id="top">
     <div class="row">
@@ -181,6 +186,7 @@
             
             <a href="https://padlet.com/justinpoveda/iyinihj3xsoqi8oi" class="btn">My Resume</a>
           </div>
+            
 
           <div class="about__photo-container">
             <img class="about__photo" src="/Images/HeadShot.jpeg" alt="" />
@@ -211,6 +217,23 @@
       </div>
     </div>
   </section>
+
+  <!-- ***** Form ***** -->
+
+  <section class="contact" id="forms">
+    <div class="row">
+      <h2>Form</h2>
+      <div class="Forms">
+        <form action="/form-handler" method="POST">
+            <p>Enter some text here:</p>
+            <textarea name="text-input">hello world</textarea>
+            <br/>
+            <input type="submit" />
+        </form>
+      </div>
+    </div>
+  </section>
+ 
 
   <!-- ***** Footer ***** -->
 
