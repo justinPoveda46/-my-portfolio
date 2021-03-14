@@ -568,6 +568,16 @@ body:not(.user-is-tabbing) a:focus {
 .contact__info {
     max-width: var(--container-medium-width);
 }
+/* --------------------------------------- */
+/* ----- Forms ----- */
+/* --------------------------------------- */
+
+.Forms {
+    display: flex;
+    align-items: center;
+    max-width: var(--container-medium-width);
+}
+
 
 /* --------------------------------------- */
 /* ----- Footer ----- */
