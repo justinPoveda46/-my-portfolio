@@ -14,15 +14,15 @@ import org.eclipse.jetty.webapp.WebInfConfiguration;
  */
 public class ServerMain {
 
-  public static void main(String[] args) throws Exception {
+  public static void main(final String[] args) throws Exception {
 
     // Create a server that listens on port 8080.
-    Server server = new Server(8080);
-    WebAppContext webAppContext = new WebAppContext();
+    final Server server = new Server(8080);
+    final WebAppContext webAppContext = new WebAppContext();
     server.setHandler(webAppContext);
 
     // Load static content from inside the jar file.
-    URL webAppDir = ServerMain.class.getClassLoader().getResource("META-INF/resources");
+    final URL webAppDir = ServerMain.class.getClassLoader().getResource("META-INF/resources");
     webAppContext.setResourceBase(webAppDir.toURI().toString());
 
     // Enable annotations so the server sees classes annotated with @WebServlet.
