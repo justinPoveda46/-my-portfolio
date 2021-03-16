@@ -18,7 +18,7 @@ public class FormHandlerServlet extends HttpServlet {
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String lanString = "es";
+        final String lanString = "es";
         // Get the value entered in the form.
         String textValue = request.getParameter("text-input");
 
@@ -36,7 +36,5 @@ public class FormHandlerServlet extends HttpServlet {
         response.getWriter().println("You submitted: " + textValue);
          response.getWriter().println("Spanish Translation: " + translatedText);
 
-        // Redirects 
-       // response.sendRedirect("http://jpoveda-sps-spring21.appspot.com/");
   }
 }
